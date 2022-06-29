@@ -103,7 +103,7 @@
                 <h3>Arboles</h3>
             </div>
             <hr>
-            <div class="col" id="arboles">
+<!--            <div class="col" id="arboles">
                 <div class="card h-100">
                     <img src="{% static 'img/ficus.jpg' %}" class="card-img-top" alt="..." height="200px">             <div class="card-body">
                         <h5 class="card-title">Ficus</h5>
@@ -123,13 +123,13 @@
                     </div>
                 </div>
             </div>
-
+        -->
             <div class="col" id="arboles">
                 <div class="card h-100">
-                    <img src="{% static 'img/monstera.jpg' %}" class="card-img-top" alt="..." height="200px">
+                    <img src="{{ aux.imagen }}" class="card-img-top" alt="..." height="200px">
                     <div class="card-body">
                         <h5 class="card-title">Monstera</h5>
-                    <label> $20.000</label>
+                    <label> ${{ aux.precio }}</label>
                     </div>
                     <div class="card-footer">
     
@@ -144,15 +144,16 @@
                                     <input type="hidden" name="imagen" id="imagen" value="{{ aux.imagen }}"> 
                                     <input type="hidden" name="nombre" id="nombre" value="{{ aux.nombre }}"> 
                                     <input type="hidden" name="precio" id="precio" value="{{ aux.precio }}"> 
+                                    <button type="submit" value="Carrito" style="cursor: pointer;" class="btn btn-success btn-sm ml-auto">Añadir</button>
                                 </form>  
-                                <button type="button" class="btn btn-primary">Añadir</button>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col" id="arboles">
+<!--          <div class="col" id="arboles">
                 <div class="card h-100">
                     <img src="{% static 'img/murraya.jpg' %}" class="card-img-top" alt="..." height="200px">
                     <div class="card-body">
@@ -826,7 +827,7 @@
                 </div>
             </div>
         </div>
-
+-->  
         <br>
 
 <!--FOOTER-->
