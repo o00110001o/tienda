@@ -1,0 +1,51 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load crispy_form_tags %}
+
+{% block contenido %}
+<section class="py-4 osahan-main-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-lg-8">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                        {{ from|crispy }}
+                    </table>
+                    <input type="submit" class="btn btn-sucess mt-2" name="" id="">
+                </form>
+                
+                <!--messages.success(request,'Producto guardado correctamente!')-->
+
+                {% if messages %}
+                    {% for msj in messages %}
+                        <script>
+                            Swal.fire({
+                                title: 'Guardado!',
+                                text: '{{ msj }}',
+                                icon: 'success',
+                                showConfirmButton: false,
+                                timer: 2000
+                            });
+                        </script>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</section>
+
+{% endblock contenido %}
+
+{% block menu %}
+<li class="nav-item dropdown"> 
+</li>
+{% endblock %}
+
+{% block contenido %}
+<section class="py-4 osahan-main-body">
+</section>
+{% endblock %}

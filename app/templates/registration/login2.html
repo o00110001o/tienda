@@ -1,0 +1,9 @@
+{% block content %}
+<form class="form" action="POST">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button type="submit" class="btn btn-success">Iniciar sesión</button>
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+</form>
+
+{% endblock %}
