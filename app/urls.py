@@ -18,7 +18,7 @@ urlpatterns = [
     path('successful/', successful, name="successful"),
     path('onprogress/', onprocess, name="onprogress"),
 #--------------------------------------------------------------------
-    path('agregar/<codigo>', agregar_producto, name="agregar_productos"),
+    path('agregar/', agregar_producto, name="agregar_productos"),
     path('modificar/', modificar_producto, name="modificar_productos"),
     path('listar/', listar_producto, name="listar_productos"),
 ]
