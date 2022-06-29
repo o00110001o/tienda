@@ -2,6 +2,13 @@
 
 from app.models import *
 from rest_framework import serializers
+from rest_framework import serializers
+from apiapp.models import Post
+
+class PostSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Post  
+        exclude = ['is_removed', 'created', 'modified']
 
 class TipoProductoSerializer(serializers.ModelSerializer): #el serializador hace el crud
     class Meta:
