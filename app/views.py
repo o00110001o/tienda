@@ -41,6 +41,9 @@ def productos(request):
 
 def carrito(request):
     return render(request, 'carrito.html')
+    
+def test(request):
+    return render(request, 'test.html')
 
 def checkout(request):
     return render(request, 'app/#.html')

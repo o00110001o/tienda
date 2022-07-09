@@ -12,6 +12,7 @@ urlpatterns = [
     path('productos/', productos,name="productos"),
     path('ingresar/', ingresar,name="login"),
     path('crear_cuenta/', crear_cuenta, name='registration'),
+    path('test/', test, name="test"),
 #--------------------------------------------------------------------
     path('checkout/', checkout, name="checkout"),
     path('orders/', historial, name="orders"),

@@ -103,7 +103,7 @@
                 <h3>Arboles</h3>
             </div>
             <hr>
-<!--            <div class="col" id="arboles">
+           <div class="col" id="arboles">
                 <div class="card h-100">
                     <img src="{% static 'img/ficus.jpg' %}" class="card-img-top" alt="..." height="200px">             <div class="card-body">
                         <h5 class="card-title">Ficus</h5>
@@ -123,37 +123,9 @@
                     </div>
                 </div>
             </div>
-        -->
-            <div class="col" id="arboles">
-                <div class="card h-100">
-                    <img src="{{ aux.imagen }}" class="card-img-top" alt="..." height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title">Monstera</h5>
-                    <label> ${{ aux.precio }}</label>
-                    </div>
-                    <div class="card-footer">
-    
-                        <div class="row">
-                            <div class="col justify-content-begin">
-                                <small class="text-muted">Stock: {{ aux.stock }}</small>
-                            </div>
-                        
-                            <div class="col">
-                                <form action="" method="POST">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="imagen" id="imagen" value="{{ aux.imagen }}"> 
-                                    <input type="hidden" name="nombre" id="nombre" value="{{ aux.nombre }}"> 
-                                    <input type="hidden" name="precio" id="precio" value="{{ aux.precio }}"> 
-                                    <button type="submit" value="Carrito" style="cursor: pointer;" class="btn btn-success btn-sm ml-auto">Añadir</button>
-                                </form>  
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-<!--          <div class="col" id="arboles">
+
+          <div class="col" id="arboles">
                 <div class="card h-100">
                     <img src="{% static 'img/murraya.jpg' %}" class="card-img-top" alt="..." height="200px">
                     <div class="card-body">
@@ -831,19 +803,19 @@
         <br>
 
 <!--FOOTER-->
-<div class="footer-expand-lg footer-dark bg-dark">  
-    <footer>
-        <br>
-        <label for="">© 2022 Copyright: </label>
-        <a href=""> www.PlantitasMagicas.cl</a> <br>
-        <a href="ubicacion.html" style="color: #ffffff;"> Ubicacion</a> <br>
-        <a href="contacto.html" style="color: #ffffff;">Informacion de Contacto</a>
-     </footer>
- </div>
-<!--SCRIPTS-->
+    <div class="footer-expand-lg footer-dark bg-dark">  
+        <footer>
+            <br>
+            <label for="">© 2022 Copyright: </label>
+            <a href=""> www.PlantitasMagicas.cl</a> <br>
+            <a href="ubicacion.html" style="color: #ffffff;"> Ubicacion</a> <br>
+            <a href="contacto.html" style="color: #ffffff;">Informacion de Contacto</a>
+        </footer>
+    </div>
+
+ <!--SCRIPTS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-   
     
 </body>
 

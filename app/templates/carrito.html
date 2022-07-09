@@ -51,97 +51,37 @@
       </div>
   </header>
 
-  <div class="row container-sm container-fluid" id="carrito" >
-    <div class="col-8 container-sm">
-      <div class="container overflow-hidden">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Producto</th>
-              <th scope="col"></th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Precio</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <img src="{% static 'static/img/banano.jpg' %}" height="70px" width="70px">
-              </th>
-              <td>Banano</td>
-              <td>
-                <input type="number">
-              </td>
-              <td>$24.990</td>
-              <td>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img src="{$ static 'static/img/macetero.jpg' %}" height="70px" width="70px">
-              </th>
-              <td>Macetero</td>
-              <td>
-                <input type="number">
-              </td>
-              <td>$19.990</td>
-              <td>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img src="{$ static 'static/img/fertilizante.jpg' %}" height="70px" width="70px">
-              </th>
-              <td>Fertilizante</td>
-              <td>
-                <input type="number">
-              </td>
-              <td>$14.990</td>
-              <td>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img src="{$ static 'static/img/perlitas.jpg' %}" height="70px" width="70px">
-              </th>
-              <td>Perlitas decorativas</td>
-              <td>
-                <input type="number">
-              </td>
-              <td>$4.990</td>
-              <td>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="col-4 container-sm border" id="total">
-      <div class="container-sm">
-        <small>Subtotal: $0000</small>
-        <h4>Total: $0000</h4>
-        <hr>
-        <button type="button" class="btn btn-success">Comprar</button>
-      </div>
+  <!--CARRITO-->
+  <div class="container">
+    <div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        <main id="items" class="col-sm-8 row"></main>
+        <!-- Carrito -->
+        <aside class="col-sm-4">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span>&euro;</p>
+            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+        </aside>
     </div>
   </div>
 <br>
 
 <!--footer-->
 
-<div class="footer-expand-lg footer-dark bg-dark">
-  <footer>
+  <div class="footer-expand-lg footer-dark bg-dark">
+    <footer>
       <br>
       <label for="">© 2022 Copyright: </label>
       <a href=""> www.PlantitasMagicas.cl</a> <br>
       <a href="ubicacion.html" style="color: #ffffff;"> Ubicacion</a> <br>
       <a href="contacto.html" style="color: #ffffff;">Informacion de Contacto</a>
-  </footer>
-</div>
+    </footer>
+  </div>
     
+  <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
