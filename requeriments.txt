@@ -7,6 +7,5 @@ pymysql
 djangorestframework 
 markdown 
 django-filter
-djangorestframework-simplejwt
-django-model-utils
+
 
